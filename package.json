@@ -1,0 +1,29 @@
+{
+  "name": "project4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edichen123/Random-Hobbist-Store.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/edichen123/Random-Hobbist-Store/issues"
+  },
+  "homepage": "https://github.com/edichen123/Random-Hobbist-Store#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "method-override": "^3.0.0",
+    "mongoose": "^6.2.3",
+    "react": "^17.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
