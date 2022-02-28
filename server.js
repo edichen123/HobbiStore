@@ -6,8 +6,8 @@ const express = require("express");
 const session = require("express-session");
 const methodOverride = require("method-override");
 
-// Controller Routes
-const productController = require("./controllers/productController");
+// Routes
+const productRoute = require("./routes/productRoutes");
 
 //MongoDB
 const connectDB = require("./MongoDB/mongooseDB");
@@ -23,7 +23,7 @@ app.use(methodOverride("_method"));
 app.use(urlencoded({ extended: false }));
 
 //middlewear for routes
-app.use("/api/products", productController);
+app.use("/api/products", productRoute);
 
 //routes
 

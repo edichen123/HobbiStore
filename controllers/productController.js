@@ -1,29 +1,26 @@
-//init
-require("dotenv").config();
-const express = require("express");
-const router = express.Router();
+// all fetching etc.
 const Product = require("../models/ProductsModel");
-const productsData = require("../data/products");
 
-router.get("seed", async (req, res) => {
-    const 
+const allProducts = async (req, res) => {
   try {
-    await Product.deleteMany({});
-    const createdProducts = await Product.insertMany(productsData);
-    res.status(200).json({
-      status: "ok",
-      message: "seeded post images",
-      data: { createdProducts },
-    });
+    const products = await Product.find({});
+    res.json(products);
   } catch (error) {
-    res.json({ status: "not ok", message: error.message });
+    console.error(error);
+    res.status(400).json({ status: "not ok", message: error.message });
   }
-});
+};
+const productById = async (req, res) => {
+  try {
+    const product = await Product.find(req.params.id);
+    res.json(product);
+  } catch (error) {
+    console.error(error);
+    res.status(400).json({ status: "not ok", message: error.message });
+  }
+};
 
-// Get All Products from DB
-router.get("/", (req, res) => {});
-
-// Get a Products from DB by :id
-router.get("/:id", (req, res) => {});
-
-module.exports = router;
+module.exports = {
+  allProducts,
+  productById
+}

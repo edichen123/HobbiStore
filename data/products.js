@@ -47,6 +47,13 @@ const products = [
     imgURL:
       "https://cdn.shopify.com/s/files/1/0028/1971/9281/products/Tarmac-BlackFront_1200x.png?v=1623296303",
   },
+  {
+    name: "Incase City Market Tote with Cordura",
+    description: "a tote",
+    price: 100,
+    stockCount: 50,
+    imgURL: "https://cdn.shopify.com/s/files/1/0040/6015/1843/products/city_market_tote_with_cordura-_black-_a1_1024x1024.jpg?v=1642644209"
+  },
 ];
 
 module.exports = products;
