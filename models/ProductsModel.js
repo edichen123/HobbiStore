@@ -7,6 +7,7 @@ const productsSchema = new Schema({
   price: { type: Number, required: true },
   stockCount: { type: Number, required: true },
   imgURL: { type: String, required: true },
+  tag: [String],
 });
 
 const Product = mongoose.model("Product", productsSchema);

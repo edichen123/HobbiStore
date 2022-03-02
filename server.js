@@ -5,6 +5,7 @@ const path = require("path");
 const express = require("express");
 const session = require("express-session");
 const methodOverride = require("method-override");
+const products = require("./data/products");
 
 // Routes
 const productRoute = require("./routes/productRoutes");
@@ -26,6 +27,10 @@ app.use(urlencoded({ extended: false }));
 app.use("/api/products", productRoute);
 
 //routes
+app.get("/:indexOfProductsArray", (req, res) => {
+  const pos = req.params.indexOfProductsArray;
+  res.send(products[pos]);
+});
 
 //listen
 app.listen(PORT, () => console.log(`Server running on ${PORT}`));
