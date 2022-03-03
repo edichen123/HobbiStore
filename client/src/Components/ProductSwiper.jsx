@@ -1,6 +1,5 @@
 import { Navigation, Pagination, Mousewheel, Keyboard, Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Link } from "react-router-dom";
 
 // swiper css - not sure working not
 import "swiper/css/bundle";
@@ -17,14 +16,14 @@ const ProductSwiper = (props) => {
         <img
           src={photo}
           alt={"bags and bike"}
-          className=" p-8 h-full w-full aspect-auto border border-green-500"
+          className=" p-8 h-full w-full aspect-auto "
         />
       </SwiperSlide>
     );
   });
 
   return (
-    <div className=" h-full border border-cyan-400">
+    <div className=" h-full">
       <div className=" w-full h-full pt-20">
         <Swiper
           modules={[Navigation, Pagination, Keyboard, Mousewheel, Autoplay]}
@@ -41,13 +40,10 @@ const ProductSwiper = (props) => {
           navigation={true}
           pagination={{ clickable: true }}
           scrollbar={{ draggable: true }}
-          className="h-full border border-red-500"
+          className="h-full "
         >
           {allProductPhotos}
         </Swiper>
-        <div className="w-full text-right px-10 absolute mt-7">
-          <Link to={`/photos`}>Show All</Link>
-        </div>
       </div>
     </div>
   );
