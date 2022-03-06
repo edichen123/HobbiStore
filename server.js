@@ -6,8 +6,8 @@ const express = require("express");
 const session = require("express-session");
 const methodOverride = require("method-override");
 // const products = require("./data/products");
-const UserRoute = require("./routes/UserRoutes")
-const AuthRoute = require("./routes/AuthRoute")
+const UserRoute = require("./routes/UserRoutes");
+const AuthRoute = require("./routes/AuthRoute");
 // Routes
 // const ProductRoute = require("./routes/ProductRoutes");
 
@@ -29,9 +29,7 @@ app.use(urlencoded({ extended: false }));
 app.use("/api/auth", AuthRoute);
 app.use("/api/users", UserRoute);
 
-
 //routes
-
 
 //listen
 app.listen(PORT, () => console.log(`Server running on ${PORT}`));
