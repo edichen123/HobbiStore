@@ -1,6 +1,6 @@
 import AllProduct from "../../Components/AllProduct";
 import Categories from "../../Components/Categories";
-import MainSwiper from "../../Components/MainSwiper";
+// import MainSwiper from "../../Components/MainSwiper";
 import ProductSwiper from "../../Components/ProductSwiper";
 
 const Home = () => {
@@ -11,6 +11,7 @@ const Home = () => {
         <ProductSwiper />
         <Categories/>
         <AllProduct/>
+
       </div>
     </div>
   );
