@@ -25,7 +25,7 @@ router.post("/register", async (req, res) => {
 router.post("/login", async (req, res) => {
   try {
     const user = await USER.findOne({ username: req.body.username });
-    !user && res.status(401).json("Wrong User Name");
+    !user && res.status(401).json("Wrong Username");
     const hashedPw = CryptoJS.AES.decrypt(user.password, process.env.SECRET);
     const OriPassword = hashedPw.toString(CryptoJS.enc.Utf8);
 
@@ -36,7 +36,7 @@ router.post("/login", async (req, res) => {
         admin: user.admin,
       },
       process.env.JWT_SECRET,
-      { expiresIn: "5d" }
+      { expiresIn: "2d" }
     );
     const { password, ...others } = user._doc;
 
@@ -45,5 +45,8 @@ router.post("/login", async (req, res) => {
     res.status(500).json(error);
   }
 });
+
+//log out
+
 
 module.exports = router;

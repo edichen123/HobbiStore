@@ -1,15 +1,37 @@
 const express = require("express");
 const router = express.Router();
-
+const PRODUCT = require("../models/ProductsModel");
 const {
-  allProducts,
-  productById,
-} = require("../controllers/productController");
+  verificationToken,
+  verifyAndAuthenticate,
+  verifyAndAuthenticateAdmin,
+} = require("./VerificationToken");
 
-// get all products from DB
-router.get("/", (allProducts) => {});
+// create
+router.post("/", verifyAndAuthenticateAdmin, async (req, res) => {
+  const newProduct = new PRODUCT(req.body);
+  try {
+    const savedProduct = await newProduct.save();
+    res.status(200).json(savedProduct);
+  } catch (error) {
+    res.status(500).json(error)
+  }
+});
 
-// get 1 product from DB by :id
-router.get("/:id", (productById) => {});
+//update
+router.put("/:id", verifyAndAuthenticateAdmin, async (req, res) => {
+  try {
+    const updatedProduct = await PRODUCT.findByIdAndUpdate(
+      req.params.id,
+      { $set: req.body },
+      { new: true }
+    );
+    res.status(200).json(updatedProduct);
+    const savedProduct = await newProduct.save();
+    res.status(200).json(savedProduct);
+  } catch (error) {
+    res.status(500).json(error);
+  }
+});
 
 module.exports = router;

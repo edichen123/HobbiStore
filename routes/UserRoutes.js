@@ -29,7 +29,7 @@ router.put("/:id", verifyAndAuthenticate, async (req, res) => {
 });
 
 // delete
-router.delete(":id", verifyAndAuthenticate, async (req, res) => {
+router.delete("/:id", verifyAndAuthenticate, async (req, res) => {
   try {
     await USER.findByIdAndDelete(req.params.id);
     res.status(200).json("User deleted");
