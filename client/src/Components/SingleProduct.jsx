@@ -7,7 +7,7 @@ const SingleProduct = (props) => {
   // console.log(props.item)
   return (
     <div className=" flex-1 m-1 min-w-[280px] h-[350px] flex items-center justify-center bg-slate-100 relative">
-      <div className=" w-[200px] h-[200px] rounded-[50%] bg-white absolute border border-green-500" />
+      <div className=" w-[200px] h-[200px] rounded-[50%] bg-white absolute " />
       <img
         src={props.item.imgURL}
         alt={props.item.description}

@@ -1,8 +1,7 @@
 import React from "react";
 import AllProduct from "../../Components/AllProduct";
-
+import { useLocation } from "react-router";
 const ProductList = () => {
-
   return (
     <div className=" ">
       <h1 className=" m-5">Backpack</h1>
@@ -11,15 +10,13 @@ const ProductList = () => {
         <div className=" m-5">
           <span className=" text-xl font-semibold mr-5">Filter Products:</span>
           <select className=" p-2 mr-5 ">
-            <option disabled selected>
-              Colour
-            </option>
+            <option value={"Color"}>Colour</option>
             <option>Black</option>
             <option>Blue</option>
             <option>Olive</option>
           </select>
           <select className=" p-2 mr-5 ">
-            <option selected>Size</option>
+            <option value={"Size"}>Size</option>
             <option>Day pack</option>
             <option>Medium-sized bags</option>
             <option>Big Bags</option>

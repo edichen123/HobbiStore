@@ -1,4 +1,6 @@
 import { Add, Remove } from "@material-ui/icons";
+import NewsLetter from "../../Components/NewsLetter";
+import Footer from "../../Components/Footer";
 
 const CartCheckoutPage = (props) => {
   return (
@@ -24,7 +26,7 @@ const CartCheckoutPage = (props) => {
           <div className=" flex-[1.5] ">
             <div className=" flex justify-between ">
               <div className=" flex-[2] flex">
-                  <button className=" ml-14">x</button>
+                <button className=" ml-14">x</button>
                 <img
                   src="https://cdn.shopify.com/s/files/1/0335/5987/1619/products/UnboxTherapyXPacsafe_25L_Backpack_82203104_1_1024x1024.jpg?v=1590048622"
                   alt=" bp"
@@ -49,17 +51,18 @@ const CartCheckoutPage = (props) => {
               </div>
             </div>
           </div>
-          
+
           <div className=" flex-1 p-5 h-[50vh]">
-             <p className=" font-extralight text-3xl">Subtotal</p>
+            <p className=" font-extralight text-3xl">Subtotal</p>
             <div className=" text-xl font-extralight">Price * QTY</div>
             <button className=" p-2 mt-5 font-normal border rounded bg-gray-700 text-white hover:transform hover:bg-white hover:text-black">
               CHECKOUT
             </button>
           </div>
         </div>
-        
       </div>
+      <NewsLetter />
+      <Footer />
     </div>
   );
 };

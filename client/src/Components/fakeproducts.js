@@ -5,8 +5,8 @@ const products = [
     description: "a backpack",
     price: 250,
     stockCount: 150,
-    imgURL:
-      "https://images.squarespace-cdn.com/content/v1/5362a66ee4b05f0813543305/1627827826736-PBOS3X82MIA4V6PRY4ML/AER91008_daypack2xpac_34hero.jpg?format=1000w",
+    imgURL: "https://images.squarespace-cdn.com/content/v1/5362a66ee4b05f0813543305/1627827826736-PBOS3X82MIA4V6PRY4ML/AER91008_daypack2xpac_34hero.jpg?format=1000w",
+    cat : "BackPack"
   },
   {
     id: 2,
@@ -32,8 +32,8 @@ const products = [
     description: "a Pouch",
     price: 90,
     stockCount: 200,
-    imgURL:
-      "https://cdn.shopify.com/s/files/1/1567/6353/products/Cap2whitewebsite_1200x.jpg?v=1603810103",
+    imgURL: "https://cdn.shopify.com/s/files/1/1567/6353/products/Cap2whitewebsite_1200x.jpg?v=1603810103",
+    cat : "Pouch"
   },
   {
     id: 5,

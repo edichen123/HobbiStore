@@ -4,7 +4,7 @@ const IndividualProduct = () => {
   return (
     <div>
       <div className=" p-12 flex">
-        <div className=" w-3/5 ">
+        <div className=" h-1/5 w-3/5 ">
           <img
             src="https://cdn.shopify.com/s/files/1/1343/3851/products/Topo-Designs-Topo-Global-Briefcase-3-Day-Navy-03_1200x1200.jpg?v=1632552150"
             alt=" topo brief"
