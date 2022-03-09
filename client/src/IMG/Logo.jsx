@@ -1,2 +1,2 @@
-const logo = "https://i.ibb.co/D4MBQVs/Hobbistore-2.png";
+const logo = "https://i.ibb.co/FxYbCKr/Hobbistore-2.jpg";
 export default logo;

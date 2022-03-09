@@ -5,7 +5,7 @@ import NavBarRight from "./SubComponents/NavBarItems/NavBarRight";
 const NavBar = () => {
   return (
     <div className="">
-      <div className=" py-2.5 px-5 flex justify-between items-center border border-green-500">
+      <div className=" py-2.5 px-5 flex justify-between items-center ">
         <NavBarLeft />
 
         <NavBarCenter />

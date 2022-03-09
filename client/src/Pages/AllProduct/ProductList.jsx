@@ -4,6 +4,8 @@ import { useLocation } from "react-router";
 import FilterProduct from "../../Components/SubComponents/FilterProduct";
 import SortProduct from "../../Components/SubComponents/SortProduct";
 import { useState } from "react";
+import NewsLetter from "../../Components/NewsLetter";
+import Footer from "../../Components/Footer";
 
 const ProductList = (props) => {
   const location = useLocation();
@@ -18,7 +20,7 @@ const ProductList = (props) => {
       [event.target.name]: value,
     });
   };
-  // console.log(filters);
+  console.log(categoryLocation);
   const handleSort = (event) => {
     const value = event.target.value;
     setSort({
@@ -30,13 +32,15 @@ const ProductList = (props) => {
 
   return (
     <div className=" ">
-      <h1 className=" m-5 text-xl font-bold">Products</h1>
+      <h1 className=" m-5 text-xl font-bold">{categoryLocation}</h1>
 
       <div className=" flex justify-between">
         <FilterProduct handleFilter={handleFilter} />
         <SortProduct sort={handleSort} />
       </div>
       <AllProduct category={categoryLocation} filters={filters} sort={sort} />
+      <NewsLetter/>
+      <Footer/>
     </div>
   );
 };

@@ -27,7 +27,7 @@ const AllProduct = (props) => {
     getProduct();
   }, [category]);
 
-  console.log(product);
+  // console.log(product);
   useEffect(() => {
     if (category) {
       const Fproducts = product.filter((item) => {
