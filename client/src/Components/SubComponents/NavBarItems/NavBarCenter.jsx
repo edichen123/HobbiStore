@@ -6,7 +6,7 @@ const NavBarCenter = () => {
   return (
     <div className="border border-yellow-500 flex-1">
       <Link to={"/"}>
-      <img src={Logo} alt="LOGOPHOTO" />
+      <img className="" src={Logo} alt="LOGOPHOTO" />
       </Link>
     </div>
   );

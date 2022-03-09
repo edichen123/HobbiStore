@@ -9,8 +9,8 @@ const ProductsSchema = new Schema(
     stockCount: { type: Number, required: true },
     imgURL: { type: String, required: true },
     category: { type: Array },
-    size: { type: Array },
-    inStock: { type: Boolean, default: true },
+    size: { type: String },
+    cat: { type: String },
   },
   { timestamps: true }
 );

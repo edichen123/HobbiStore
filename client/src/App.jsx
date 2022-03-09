@@ -14,6 +14,7 @@ import CartCheckoutPage from "./Pages/AllProduct/CartCheckoutPage";
 import Pay from "./Pages/Payment/Pay";
 import Sucecess from "./Pages/Payment/Success";
 import Categories from "./Components/Categories";
+import AllProduct from "./Components/AllProduct";
 
 function App() {
   const user = true;
@@ -24,7 +25,7 @@ function App() {
       <ScrollToTop smooth viewBox="-50 0 256 256" />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/products/" element={<Categories />} />
+        <Route path="/products/" element={<AllProduct />} />
         <Route path="/products/:category" element={<ProductList />} />
         <Route path="/product/:id" element={<IndividualProduct />} />
         <Route path="/cart" element={<CartCheckoutPage />} />

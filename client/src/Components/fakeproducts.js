@@ -5,8 +5,11 @@ const products = [
     description: "a backpack",
     price: 250,
     stockCount: 150,
-    imgURL: "https://images.squarespace-cdn.com/content/v1/5362a66ee4b05f0813543305/1627827826736-PBOS3X82MIA4V6PRY4ML/AER91008_daypack2xpac_34hero.jpg?format=1000w",
-    cat : "BackPack"
+    imgURL:
+      "https://images.squarespace-cdn.com/content/v1/5362a66ee4b05f0813543305/1627827826736-PBOS3X82MIA4V6PRY4ML/AER91008_daypack2xpac_34hero.jpg?format=1000w",
+    cat: "BackPack",
+    color: "Black",
+    size: "S",
   },
   {
     id: 2,
@@ -16,6 +19,9 @@ const products = [
     stockCount: 100,
     imgURL:
       "https://images.squarespace-cdn.com/content/v1/5362a66ee4b05f0813543305/1583523409468-4PMNR9DDYD88FAXBQJBB/AER31009_daypack2_black_front+.jpg?format=1000w",
+    cat: "BackPack",
+    color: "Black",
+    size: "S",
   },
   {
     id: 3,
@@ -25,6 +31,9 @@ const products = [
     stockCount: 89,
     imgURL:
       "https://cdn.shopify.com/s/files/1/1567/6353/products/silhsidview_1200x.jpg?v=1592415562",
+    cat: "BackPack",
+    color: "Black",
+    size: "M",
   },
   {
     id: 4,
@@ -32,8 +41,11 @@ const products = [
     description: "a Pouch",
     price: 90,
     stockCount: 200,
-    imgURL: "https://cdn.shopify.com/s/files/1/1567/6353/products/Cap2whitewebsite_1200x.jpg?v=1603810103",
-    cat : "Pouch"
+    imgURL:
+      "https://cdn.shopify.com/s/files/1/1567/6353/products/Cap2whitewebsite_1200x.jpg?v=1603810103",
+    cat: "BackPack",
+    color: "Black",
+    size: "S",
   },
   {
     id: 5,
@@ -52,6 +64,9 @@ const products = [
     stockCount: 100,
     imgURL:
       "https://cdn.shopify.com/s/files/1/0028/1971/9281/products/Tarmac-BlackFront_1200x.png?v=1623296303",
+    cat: "BackPack",
+    color: "Black",
+    size: "L",
   },
   {
     id: 7,
