@@ -58,9 +58,9 @@ const CartCheckoutPage = (props) => {
 
           <div className=" flex-[1.5] flex items-center justify-center ">
             <div className=" flex items-center mb-5 w-1/3 justify-around">
-              <Add className=" border border-black rounded-full cursor-pointer" />
-              <div className=" text-lg m-1 ">{product.qty}</div>
               <Remove className=" border border-black rounded-full cursor-pointer" />
+              <div className=" text-lg m-1 ">{product.qty}</div>
+              <Add className=" border border-black rounded-full cursor-pointer" />
             </div>
           </div>
         </div>
