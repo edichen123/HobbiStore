@@ -23,13 +23,17 @@
   "homepage": "https://github.com/edichen123/Random-Hobbist-Store#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "crypto-js": "^4.1.1",
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
     "express-session": "^1.17.2",
+    "jsonwebtoken": "^8.5.1",
     "method-override": "^3.0.0",
     "mongoose": "^6.2.3",
     "path": "^0.12.7",
-    "react": "^17.0.2"
+    "react": "^17.0.2",
+    "stripe": "^8.207.0"
   },
   "devDependencies": {
     "concurrently": "^7.0.0",

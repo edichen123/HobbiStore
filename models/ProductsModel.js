@@ -10,6 +10,7 @@ const ProductsSchema = new Schema(
     imgURL: { type: String, required: true },
     category: { type: Array },
     size: { type: String },
+    cat: { type: String },
   },
   { timestamps: true }
 );

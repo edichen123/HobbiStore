@@ -2,12 +2,13 @@ import React from "react";
 import ShoppingCartOutlinedIcon from "@material-ui/icons/ShoppingCartOutlined";
 import SearchOutlinedIcon from "@material-ui/icons/SearchOutlined";
 import FavoriteBorderOutlinedIcon from "@material-ui/icons/FavoriteBorderOutlined";
+import { Link } from "react-router-dom";
 
 const SingleProduct = (props) => {
   console.log(props.item)
   return (
     <div className=" flex-1 m-1 min-w-[280px] h-[350px] flex items-center justify-center bg-slate-100 relative">
-      <div className=" w-[200px] h-[200px] rounded-[50%] bg-white absolute border border-green-500" />
+      <div className=" w-[200px] h-[200px] rounded-[50%] bg-white absolute " />
       <img
         src={props.item.imgURL}
         alt={props.item.description}
@@ -17,10 +18,11 @@ const SingleProduct = (props) => {
         <div className=" w-10 h-10 rounded-[50%] bg-white flex items-center justify-center m-2 transition duration-75 cursor-pointer hover:bg-slate-100 hover:scale-110">
           <ShoppingCartOutlinedIcon />
         </div>
-
-        <div className=" w-10 h-10 rounded-[50%] bg-white flex items-center justify-center m-2 transition cursor-pointer hover:bg-slate-100 hover:scale-110">
-          <SearchOutlinedIcon />
-        </div>
+        <Link to ={`/product/${props.item._id}`}>
+          <div className=" w-10 h-10 rounded-[50%] bg-white flex items-center justify-center m-2 transition cursor-pointer hover:bg-slate-100 hover:scale-110">
+            <SearchOutlinedIcon />
+          </div>
+        </Link>
 
         <div className=" w-10 h-10 rounded-[50%] bg-white flex items-center justify-center m-2 transition cursor-pointer hover:bg-slate-100 hover:scale-110">
           <FavoriteBorderOutlinedIcon />

@@ -1,11 +1,14 @@
 const products = [
   {
-    name: "Aer Day Pack 2 X-Pac",
+    title: "Aer Day Pack 2 X-Pac",
     description: "a backpack",
     price: 250,
     stockCount: 150,
     imgURL:
       "https://images.squarespace-cdn.com/content/v1/5362a66ee4b05f0813543305/1627827826736-PBOS3X82MIA4V6PRY4ML/AER91008_daypack2xpac_34hero.jpg?format=1000w",
+    category: ["BackPack"],
+    size: ["15L and Below"],
+    inStock: true,
   },
   {
     name: "Aer Daypack 2",
@@ -14,6 +17,9 @@ const products = [
     stockCount: 100,
     imgURL:
       "https://images.squarespace-cdn.com/content/v1/5362a66ee4b05f0813543305/1583523409468-4PMNR9DDYD88FAXBQJBB/AER31009_daypack2_black_front+.jpg?format=1000w",
+    category: ["BackPack"],
+    size: ["15L and Below"],
+    inStock: true,
   },
   {
     name: "Evergoods Civic Panel Loader 24L V2",
@@ -22,6 +28,9 @@ const products = [
     stockCount: 89,
     imgURL:
       "https://cdn.shopify.com/s/files/1/1567/6353/products/silhsidview_1200x.jpg?v=1592415562",
+    category: ["BackPack"],
+    size: ["15L and Above"],
+    inStock: true,
   },
   {
     name: "Evergoods Civic Access Pouch 2L",
@@ -30,6 +39,9 @@ const products = [
     stockCount: 200,
     imgURL:
       "https://cdn.shopify.com/s/files/1/1567/6353/products/Cap2whitewebsite_1200x.jpg?v=1603810103",
+    category: ["Pouch"],
+    size: ["15L and Below"],
+    inStock: true,
   },
   {
     name: "Able Carry Thirteen Daybag",
@@ -38,6 +50,9 @@ const products = [
     stockCount: 300,
     imgURL:
       "https://cdn.shopify.com/s/files/1/0028/1971/9281/products/302101102_-_13L_XPAC_Deep_Black_-_Front_Pocket_1200x.png?v=1624593774",
+    category: ["BackPack"],
+    size: ["15L and Below"],
+    inStock: true,
   },
   {
     name: "Able Carry Max Backpack",
@@ -52,7 +67,11 @@ const products = [
     description: "a tote",
     price: 100,
     stockCount: 50,
-    imgURL: "https://cdn.shopify.com/s/files/1/0040/6015/1843/products/city_market_tote_with_cordura-_black-_a1_1024x1024.jpg?v=1642644209"
+    imgURL:
+      "https://cdn.shopify.com/s/files/1/0040/6015/1843/products/city_market_tote_with_cordura-_black-_a1_1024x1024.jpg?v=1642644209",
+    category: ["BackPack"],
+    size: "S",
+    inStock: true,
   },
 ];
 

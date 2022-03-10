@@ -1,41 +1,46 @@
 import React from "react";
 import AllProduct from "../../Components/AllProduct";
+import { useLocation } from "react-router";
+import FilterProduct from "../../Components/SubComponents/FilterProduct";
+import SortProduct from "../../Components/SubComponents/SortProduct";
+import { useState } from "react";
+import NewsLetter from "../../Components/NewsLetter";
+import Footer from "../../Components/Footer";
 
-const ProductList = () => {
+const ProductList = (props) => {
+  const location = useLocation();
+  const categoryLocation = location.pathname.split("/")[2];
+  const [filters, setFilters] = useState({ color: "All", size: "S" });
+  const [sort, setSort] = useState({});
+
+  const handleFilter = (event) => {
+    const value = event.target.value;
+    setFilters({
+      ...filters,
+      [event.target.name]: value,
+    });
+  };
+  console.log(categoryLocation);
+  const handleSort = (event) => {
+    const value = event.target.value;
+    setSort({
+      ...sort,
+      [event.target.name]: value,
+    });
+  };
+  // console.log(sort);
 
   return (
     <div className=" ">
-      <h1 className=" m-5">Backpack</h1>
+      <h1 className=" m-5 text-xl font-bold">{categoryLocation}</h1>
 
       <div className=" flex justify-between">
-        <div className=" m-5">
-          <span className=" text-xl font-semibold mr-5">Filter Products:</span>
-          <select className=" p-2 mr-5 ">
-            <option disabled selected>
-              Colour
-            </option>
-            <option>Black</option>
-            <option>Blue</option>
-            <option>Olive</option>
-          </select>
-          <select className=" p-2 mr-5 ">
-            <option selected>Size</option>
-            <option>Day pack</option>
-            <option>Medium-sized bags</option>
-            <option>Big Bags</option>
-          </select>
-        </div>
-
-        <div className=" m-5">
-          <span className=" text-xl font-semibold mr-5">Sort Products:</span>
-          <select className=" p-2 mr-5 ">
-            {/* <option disabled selected>Neweset</option> */}
-            <option>Price (Low To High)</option>
-            <option>Price (High to Low)</option>
-          </select>
-        </div>
+        <FilterProduct handleFilter={handleFilter} />
+        <SortProduct sort={handleSort} />
       </div>
-      <AllProduct />
+      <AllProduct category={categoryLocation} filters={filters} sort={sort} />
+      <NewsLetter/>
+      <Footer/>
     </div>
   );
 };

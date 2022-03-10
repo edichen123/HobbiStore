@@ -16,7 +16,7 @@ const ProductSwiper = (props) => {
         <img
           src={photo}
           alt={"bags and bike"}
-          className=" p-8 h-full w-auto aspect-auto m-auto border border-red-400 "
+          className=" p-8 h-full w-auto aspect-auto m-auto "
         />
       </SwiperSlide>
     );
@@ -36,7 +36,7 @@ const ProductSwiper = (props) => {
           loop={true}
           loopFillGroupWithBlank={false}
           keyboard={{ enabled: true }}
-          mousewheel={true}
+          mousewheel={false}
           navigation={true}
           pagination={{ clickable: true }}
           scrollbar={{ draggable: true }}
