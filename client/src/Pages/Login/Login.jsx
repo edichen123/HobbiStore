@@ -103,9 +103,9 @@ const Login = () => {
     // );
 
     loggingin(dispatch, { username, password });
-    dispatch(login({
-      loggedIn:true
-    }))
+    // dispatch(login({
+    //   loggedIn:true
+    // }))
   };
 
   return (

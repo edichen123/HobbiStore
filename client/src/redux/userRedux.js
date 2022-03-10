@@ -38,9 +38,9 @@ const userSlice = createSlice({
   },
   //api call
   reducers: {
-    login: (state, action) => {
+    login: (state) => {
       state.isFetching = true;
-      state.currentUser = action.payload;
+      // state.currentUser = action.payload;
       // state.loggedIn = false;
     },
     loginSuccessful: (state, action) => {
@@ -53,7 +53,8 @@ const userSlice = createSlice({
     },
     logout: (state, action) => {
       state.currentUser = null;
-      state.loggedIn = action.payload.loggedIn;
+      state.error = true;
+      // state.loggedIn = action.payload.loggedIn;
     },
   },
 });

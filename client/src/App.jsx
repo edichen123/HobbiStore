@@ -21,8 +21,9 @@ import Logout from "./Pages/Login/Logout";
 
 function App() {
   const user = useSelector((state) => state.user.currentUser);
-  const loggedIn = useSelector((state) => state.user.loggedIn);
-
+  // const loggedIn = useSelector((state) => state.user.loggedIn);
+  const register = useSelector((state) => state.register.registered);
+  // console.log(register)
   return (
     <div className=" h-screen">
       <Announcement />
@@ -36,11 +37,11 @@ function App() {
         <Route path="/cart" element={<CartCheckoutPage />} />
         <Route path="/success" element={<Success />} />
         <Route path="/login" element={user ? <Navigate to="/" /> : <Login />} />
-        <Route path="/logout" element={<Logout />} />
         <Route
-          path="/signup"
-          element={!user ? <Navigate to="/" /> : <SignUp />}
+          path="/logout"
+          element={register ? <Navigate to="/" /> : <Logout />}
         />
+        <Route path="/signup" element={<SignUp />} />
       </Routes>
     </div>
   );
