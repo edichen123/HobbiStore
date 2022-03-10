@@ -24,9 +24,9 @@ const SingleProduct = (props) => {
           </div>
         </Link>
 
-        <div className=" w-10 h-10 rounded-[50%] bg-white flex items-center justify-center m-2 transition cursor-pointer hover:bg-slate-100 hover:scale-110">
+        {/* <div className=" w-10 h-10 rounded-[50%] bg-white flex items-center justify-center m-2 transition cursor-pointer hover:bg-slate-100 hover:scale-110">
           <FavoriteBorderOutlinedIcon />
-        </div>
+        </div> */}
       </div>
     </div>
   );

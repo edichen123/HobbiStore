@@ -7,7 +7,7 @@ const {
   verifyAndAuthenticateAdmin,
 } = require("./VerificationToken");
 
-// create
+// create 
 router.post("/", verifyAndAuthenticateAdmin, async (req, res) => {
   const newProduct = new PRODUCT(req.body);
   try {

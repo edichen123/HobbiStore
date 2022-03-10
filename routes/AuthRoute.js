@@ -47,6 +47,12 @@ router.post("/login", async (req, res) => {
 });
 
 //log out
-
+router.delete("/logout", async (req, res)=>{
+  try {
+    const logout = await USER.deleteOne
+  } catch (error) {
+    res.status(500).json(error)
+  }
+})
 
 module.exports = router;

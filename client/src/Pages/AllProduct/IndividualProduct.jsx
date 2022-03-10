@@ -86,7 +86,7 @@ const IndividualProduct = () => {
           </div>
         </div>
         <div className=" ">
-          <Link to={backToCat}>
+          <Link to={"/"}>
             <p className=" border rounded border-black p-2 hover:transform hover:scale-110 hover:bg-black/20">
               Home
             </p>
