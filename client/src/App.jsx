@@ -5,22 +5,21 @@ import Announcement from "./Components/Announcement";
 import NavBar from "./Components/NavBar";
 import ScrollToTop from "react-scroll-to-top";
 import ProductList from "./Pages/AllProduct/ProductList";
-import NewsLetter from "./Components/NewsLetter";
-import Footer from "./Components/Footer";
+// import NewsLetter from "./Components/NewsLetter";
+// import Footer from "./Components/Footer";
 import IndividualProduct from "./Pages/AllProduct/IndividualProduct";
 import SignUp from "./Pages/Login/SignUp";
 import Login from "./Pages/Login/Login";
 import CartCheckoutPage from "./Pages/AllProduct/CartCheckoutPage";
-import Pay from "./Pages/Payment/Pay";
-import Sucecess from "./Pages/Payment/Success";
-import Categories from "./Components/Categories";
+// import Pay from "./Pages/Payment/Pay";
+// import Sucecess from "./Pages/Payment/Success";
+// import Categories from "./Components/Categories";
 import AllProduct from "./Components/AllProduct";
 import Success from "./Pages/Payment/Success";
 import { useDispatch, useSelector } from "react-redux";
 
-
 function App() {
-  const user = useSelector((state)=> state.user.currentUser);
+  const user = useSelector((state) => state.user.currentUser);
   return (
     <div className=" h-screen">
       <Announcement />

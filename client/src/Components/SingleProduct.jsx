@@ -5,7 +5,7 @@ import FavoriteBorderOutlinedIcon from "@material-ui/icons/FavoriteBorderOutline
 import { Link } from "react-router-dom";
 
 const SingleProduct = (props) => {
-  console.log(props.item)
+  // console.log(props.item)
   return (
     <div className=" flex-1 m-1 min-w-[280px] h-[350px] flex items-center justify-center bg-slate-100 relative">
       <div className=" w-[200px] h-[200px] rounded-[50%] bg-white absolute " />
