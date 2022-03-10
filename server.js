@@ -4,7 +4,6 @@ const { urlencoded } = require("express");
 const path = require("path");
 const express = require("express");
 const session = require("express-session");
-const mongoose = require("mongoose");
 const methodOverride = require("method-override");
 const cors = require("cors");
 // Routes
@@ -16,15 +15,8 @@ const OrderRoute = require("./routes/OrderRoute");
 const StripeRoute = require("./routes/StripeRoute");
 
 //MongoDB
-// const connectDB = require("./MongoDB/mongooseDB");
-// connectDB();
-
-mongoose
-  .connect(process.env.MONGO_URI)
-  .then(() => console.log("DB Connection Successfull!"))
-  .catch((err) => {
-    console.log(err);
-  });
+const connectDB = require("./MongoDB/mongooseDB");
+connectDB();
 
 //config
 const app = express();
