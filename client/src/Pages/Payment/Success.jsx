@@ -1,6 +1,10 @@
 import React from "react";
+import {useLocation} from "react-router-dom"
 
 const Success = () => {
+  const currentLocation = useLocation()
+  console.log(currentLocation)
+
   return (
     <div className="bg-gray-100 h-screen">
       <div className="bg-white p-6  md:mx-auto">
@@ -20,7 +24,7 @@ const Success = () => {
           <p> Have a great day! </p>
           <div className="py-10 text-center">
             <a
-              href="#"
+              href="/"
               class="px-12 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-3"
             >
               GO BACK

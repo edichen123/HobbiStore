@@ -15,9 +15,12 @@ import Pay from "./Pages/Payment/Pay";
 import Sucecess from "./Pages/Payment/Success";
 import Categories from "./Components/Categories";
 import AllProduct from "./Components/AllProduct";
+import Success from "./Pages/Payment/Success";
+import { useDispatch, useSelector } from "react-redux";
+
 
 function App() {
-  const user = true;
+  const user = useSelector((state)=> state.user.currentUser);
   return (
     <div className=" h-screen">
       <Announcement />
@@ -29,6 +32,7 @@ function App() {
         <Route path="/products/:category" element={<ProductList />} />
         <Route path="/product/:id" element={<IndividualProduct />} />
         <Route path="/cart" element={<CartCheckoutPage />} />
+        <Route path="/success" element={<Success />} />
         <Route path="/login" element={user ? <Navigate to="/" /> : <Login />} />
         <Route
           path="/signup"

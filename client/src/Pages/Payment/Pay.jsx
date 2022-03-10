@@ -8,7 +8,7 @@ const Pay = () => {
   const PK =
     "pk_test_51Kako0C88O9BLlUAVZuw8I1beSascc5u3s2nQoW4sEvxSWosw9LRsy9WbkiOz6ILbkRQ6L15mPjDhGvZP4nFb8kx00DSGo5BkT";
   const [stripeToken, setStripeToken] = useState(null);
-//   const navigate = useNavigate()
+  //   const navigate = useNavigate()
 
   const onToken = (token) => {
     setStripeToken(token);
@@ -36,7 +36,7 @@ const Pay = () => {
     <div className=" flex justify-center items-center h-full w-full">
       <StripeCheckout
         name="HobbiStore"
-        image="https://i.ibb.co/hc2M7B1/Hobbistore.jpg"
+        image="https://i.ibb.co/FxYbCKr/Hobbistore-2.jpg"
         billingAddress
         shippingAddress
         description="Total : $20 SGD"

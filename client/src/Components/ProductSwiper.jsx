@@ -36,7 +36,7 @@ const ProductSwiper = (props) => {
           loop={true}
           loopFillGroupWithBlank={false}
           keyboard={{ enabled: true }}
-          mousewheel={true}
+          mousewheel={false}
           navigation={true}
           pagination={{ clickable: true }}
           scrollbar={{ draggable: true }}
