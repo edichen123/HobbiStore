@@ -18,8 +18,8 @@ const CartCheckoutPage = (props) => {
 
   const onToken = (token) => {
     setStripeToken(token);
-    console.log(token);
-    console.log(stripeToken);
+    // console.log(token);
+    // console.log(stripeToken);
   };
 
   useEffect(() => {
