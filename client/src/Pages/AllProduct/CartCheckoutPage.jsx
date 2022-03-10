@@ -14,29 +14,29 @@ const CartCheckoutPage = (props) => {
 
   const cart = useSelector((state) => state.cart); // redux
   // console.log(cart)
-  // const [stripeToken, setStripeToken] = useState(null);
+  const [stripeToken, setStripeToken] = useState(null);
 
-  // const onToken = (token) => {
-  //   setStripeToken(token);
-  //   console.log(token);
-  //   console.log(stripeToken);
-  // };
+  const onToken = (token) => {
+    setStripeToken(token);
+    console.log(token);
+    console.log(stripeToken);
+  };
 
-  // useEffect(() => {
-  //   const makeReq = async () => {
-  //     try {
-  //       const response = await axios.post(`/api/checkout/payment`, {
-  //         // const response = await axios.post("http://localhost:3001/api/checkout/payment", {
-  //         tokenID: stripeToken.id,
-  //         amount: cart.totalPrice * 100,
-  //         currency: "sgd",
-  //       });
-  //       console.log(response.data);
-  //       <Navigate to="/success" data={response.data} />;
-  //     } catch (error) {}
-  //   };
-  //   stripeToken && cart.totalPrice >= 1 && makeReq();
-  // }, [stripeToken, cart.totalPrice]);
+  useEffect(() => {
+    const makeReq = async () => {
+      try {
+        const response = await axios.post(`/api/checkout/payment`, {
+          // const response = await axios.post("http://localhost:3001/api/checkout/payment", {
+          tokenID: stripeToken.id,
+          amount: cart.totalPrice * 100,
+          currency: "sgd",
+        });
+        console.log(response.data);
+        <Navigate to="/success" data={response.data} />;
+      } catch (error) {}
+    };
+    stripeToken && cart.totalPrice >= 1 && makeReq();
+  }, [stripeToken, cart.totalPrice]);
 
   const cartDetail = cart.products.map((product) => {
     return (
@@ -94,7 +94,7 @@ const CartCheckoutPage = (props) => {
             <div className=" text-xl font-extralight">
               ${cart.totalPrice} SGD
             </div>
-            {/* <StripeCheckout
+            <StripeCheckout
               name="HobbiStore"
               image="https://i.ibb.co/FxYbCKr/Hobbistore-2.jpg"
               billingAddress
@@ -111,7 +111,7 @@ const CartCheckoutPage = (props) => {
               <button className=" p-2 mt-5 font-normal border rounded bg-gray-700 text-white hover:transform hover:bg-white hover:text-black">
                 CHECKOUT
               </button>
-            </StripeCheckout> */}
+            </StripeCheckout>
           </div>
         </div>
       </div>
