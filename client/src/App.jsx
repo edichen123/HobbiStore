@@ -17,9 +17,13 @@ import CartCheckoutPage from "./Pages/AllProduct/CartCheckoutPage";
 import AllProduct from "./Components/AllProduct";
 import Success from "./Pages/Payment/Success";
 import { useDispatch, useSelector } from "react-redux";
+import Logout from "./Pages/Login/Logout";
 
 function App() {
   const user = useSelector((state) => state.user.currentUser);
+  // const loggedIn = useSelector((state) => state.user.loggedIn);
+  const register = useSelector((state) => state.register.registered);
+  // console.log(register)
   return (
     <div className=" h-screen">
       <Announcement />
@@ -27,16 +31,14 @@ function App() {
       <ScrollToTop smooth viewBox="-50 0 256 256" />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/products/" element={<AllProduct />} />
+        {/* <Route path="/products/" element={<AllProduct />} /> */}
         <Route path="/products/:category" element={<ProductList />} />
         <Route path="/product/:id" element={<IndividualProduct />} />
         <Route path="/cart" element={<CartCheckoutPage />} />
         <Route path="/success" element={<Success />} />
         <Route path="/login" element={user ? <Navigate to="/" /> : <Login />} />
-        <Route
-          path="/signup"
-          element={user ? <Navigate to="/" /> : <SignUp />}
-        />
+        <Route path="/logout" element={<Logout />} />
+        <Route path="/signup" element={<SignUp />} />
       </Routes>
     </div>
   );

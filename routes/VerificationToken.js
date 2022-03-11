@@ -1,5 +1,6 @@
 const jwt = require("jsonwebtoken");
 
+//verify token
 const verificationToken = (req, res, next) => {
   const authHeader = req.headers.token;
   if (authHeader) {
@@ -13,7 +14,7 @@ const verificationToken = (req, res, next) => {
     return res.status(401).json("Not Authenticated!");
   }
 };
-
+//verify and authenticate
 const verifyAndAuthenticate = (req, res, next) => {
   verificationToken(req, res, () => {
     if (req.user.id === req.params.id || req.user.admin) {
@@ -23,6 +24,8 @@ const verifyAndAuthenticate = (req, res, next) => {
     }
   });
 };
+
+//verify admin
 const verifyAndAuthenticateAdmin = (req, res, next) => {
   verificationToken(req, res, () => {
     if (req.user.admin) {

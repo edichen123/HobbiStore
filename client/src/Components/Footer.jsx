@@ -5,6 +5,7 @@ import {
   Room,
   Phone,
 } from "@material-ui/icons";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -24,16 +25,26 @@ const Footer = () => {
 
       <div className=" flex-1 p-5 ">
         <h3 className=" mb-7">Useful Links</h3>
-        <ul className=" m-0 p-0 list-none flex flex-wrap">
-          <li className=" w-1/2 mb-2">Home</li>
-          <li className=" w-1/2 mb-2">Cart</li>
-          <li className=" w-1/2 mb-2">Backpack</li>
-          <li className=" w-1/2 mb-2">Folding Bicycle</li>
-          <li className=" w-1/2 mb-2">Jacket</li>
-          <li className=" w-1/2 mb-2">My Account</li>
+        <ul className=" m-0 p-0 list-none flex flex-col justify-between">
+          <Link to="/">
+            <li className=" w-1/2 mb-2">Home</li>
+          </Link>
+          <Link to="/cart">
+            <li className=" w-1/2 mb-2">Cart</li>
+          </Link>
+          <Link to="/products/BackPack">
+            <li className=" w-1/2 mb-2">Backpack</li>
+          </Link>
+          <Link to="/products/FoldingBicycle">
+            <li className=" w-1/2 mb-2">Folding Bicycle</li>
+          </Link>
+          <Link to="/products/Jacket">
+            <li className=" w-1/2 mb-2">Jacket</li>
+          </Link>
+          {/* <li className=" w-1/2 mb-2">My Account</li>
           <li className=" w-1/2 mb-2">Order Tracking</li>
           <li className=" w-1/2 mb-2">Wishlist</li>
-          <li className=" w-1/2 mb-2">Terms and Condition</li>
+          <li className=" w-1/2 mb-2">Terms and Condition</li> */}
         </ul>
       </div>
 

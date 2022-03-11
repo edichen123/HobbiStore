@@ -2,13 +2,18 @@ import { Badge } from "@material-ui/core";
 import ShoppingCartOutlinedIcon from "@material-ui/icons/ShoppingCartOutlined";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import Logout from "../../../Pages/Login/Logout"
 
 const NavBarRight = () => {
   // const cart = useSelector(state =>state.cart)
   const qty = useSelector((state) => state.cart.qty);
+  
   // console.log(qty);
   return (
     <div className=" flex-1 flex items-center justify-end">
+      <Link to="/logout">
+        <div className=" text-sm cursor-pointer ml-6">Sign Out</div>
+      </Link>
       <Link to="/login">
         <div className=" text-sm cursor-pointer ml-6">Sign in</div>
       </Link>

@@ -36,7 +36,7 @@ router.post("/login", async (req, res) => {
         admin: user.admin,
       },
       process.env.JWT_SECRET,
-      { expiresIn: "2d" }
+      { expiresIn: "1d" }
     );
     const { password, ...others } = user._doc;
 
@@ -47,6 +47,12 @@ router.post("/login", async (req, res) => {
 });
 
 //log out
-
+router.delete("/logout", async (req, res) => {
+  try {
+    const logout = await USER.deleteOne();
+  } catch (error) {
+    res.status(500).json(error);
+  }
+});
 
 module.exports = router;
