@@ -22,19 +22,27 @@ const NavBarLeft = () => {
 
   // const filtered = array/obj.filter(array=>arr.object.toLowerCase().includes(query))
   // const mapfiltered = filtered.map((user)=> return x)
+
+  const handleSubmit = () => {
+    console.log("Clicked");
+  };
   return (
     <div className=" flex-1 flex items-center">
       {/* <div className=" text-sm cursor-pointer">EN</div> */}
-      <div className=" border-2 flex items-center ml-6 p-1 text-gray-400 text-sm">
-        <div className=" border-none">
-          <input text="text" placeholder="Search" 
-          // onChange={searchItem} 
-          />
-          <button>
-            <Search className=" hover:text-black hover:transform hover:scale-150" />
-          </button>
+      <form>
+        <div className=" border-2 flex items-center ml-6 p-1 text-gray-400 text-sm">
+          <div className=" border-none">
+            <input
+              text="text"
+              placeholder="Search"
+              // onChange={searchItem}
+            />
+            <button onClick={handleSubmit}>
+              <Search className=" hover:text-black hover:transform hover:scale-150" />
+            </button>
+          </div>
         </div>
-      </div>
+      </form>
     </div>
   );
 };

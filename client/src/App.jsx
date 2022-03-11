@@ -37,10 +37,7 @@ function App() {
         <Route path="/cart" element={<CartCheckoutPage />} />
         <Route path="/success" element={<Success />} />
         <Route path="/login" element={user ? <Navigate to="/" /> : <Login />} />
-        <Route
-          path="/logout"
-          element={register ? <Navigate to="/" /> : <Logout />}
-        />
+        <Route path="/logout" element={<Logout />} />
         <Route path="/signup" element={<SignUp />} />
       </Routes>
     </div>

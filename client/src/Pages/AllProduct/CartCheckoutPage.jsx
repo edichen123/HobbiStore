@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 // import { userRequest } from "../../AxiosRequest";
 import { Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const CartCheckoutPage = (props) => {
   const PK =
@@ -33,6 +34,9 @@ const CartCheckoutPage = (props) => {
         });
         console.log(response.data);
         <Navigate to="/success" data={response.data} />;
+        // setStripeToken(0)
+        // product.qty = 0
+        // setqty = product.qty = 0
       } catch (error) {}
     };
     stripeToken && cart.totalPrice >= 1 && makeReq();
@@ -74,15 +78,17 @@ const CartCheckoutPage = (props) => {
         <p className=" text-4xl text-center font-light">Your Cart</p>
 
         <div className=" flex items-center justify-between p-5">
-          <button className=" p-2 font-normal border rounded border-black hover:transform hover:scale-110 ">
-            BACK TO SHOPPING
-          </button>
+          <Link to="/">
+            <button className=" p-2 font-normal border rounded border-black hover:transform hover:scale-110 ">
+              BACK TO HOME
+            </button>
+          </Link>
           <div className="">
-            <span className=" underline cursor-pointer my-0 mx-3 ">
+            {/* <span className=" underline cursor-pointer my-0 mx-3 ">
               Shopping Bag ( )
-            </span>
+            </span> */}
             <span className=" underline cursor-pointer my-0 mx-3 ">
-              Wishlist
+              Wishlist ()
             </span>
           </div>
         </div>
