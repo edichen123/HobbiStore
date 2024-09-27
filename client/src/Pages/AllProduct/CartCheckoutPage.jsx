@@ -47,7 +47,7 @@ const CartCheckoutPage = (props) => {
       <div key={product._id} className=" flex-[1.5] w-3/5">
         <div className=" flex justify-between ">
           <div className=" flex-[2] flex">
-            <button className=" ml-14">x</button>
+            {/* <button className=" ml-14">x</button> */}
             <img src={product.imgURL} alt="BackPack" className=" w-48" />
             <div className=" p-5 flex flex-col justify-around ">
               <span>

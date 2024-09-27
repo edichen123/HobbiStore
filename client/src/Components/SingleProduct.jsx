@@ -14,11 +14,12 @@ const SingleProduct = (props) => {
         alt={props.item.description}
         className=" h-3/4 z-[2]"
       />
+      {/* <Link to={`/product/${props.item._id}`}> */}
       <div className=" opacity-0 w-full h-full absolute top-0 left-0 bg-black/20 z-[3] flex items-center justify-center cursor-pointer hover:opacity-100">
         <div className=" w-10 h-10 rounded-[50%] bg-white flex items-center justify-center m-2 transition duration-75 cursor-pointer hover:bg-slate-100 hover:scale-110">
           <ShoppingCartOutlinedIcon />
         </div>
-        <Link to ={`/product/${props.item._id}`}>
+        <Link to={`/product/${props.item._id}`}>
           <div className=" w-10 h-10 rounded-[50%] bg-white flex items-center justify-center m-2 transition cursor-pointer hover:bg-slate-100 hover:scale-110">
             <SearchOutlinedIcon />
           </div>
@@ -28,6 +29,7 @@ const SingleProduct = (props) => {
           <FavoriteBorderOutlinedIcon />
         </div> */}
       </div>
+      {/* </Link> */}
     </div>
   );
 };

@@ -23,6 +23,7 @@ const app = express();
 const PORT = process.env.PORT;
 
 // middleware
+app.use(express.static(path.join(__dirname, "./client/build")));
 app.use(express.json());
 app.use(cors());
 app.use(methodOverride("_method"));
@@ -39,6 +40,9 @@ app.use("/api/orders", OrderRoute);
 app.use("/api/checkout", StripeRoute);
 
 //routes
+app.get("/*", (req, res) => {
+  res.sendFile(path.join(__dirname, "./client/build", "index.html"));
+});
 
 //listen
 app.listen(PORT, () => console.log(`Server running on ${PORT}`));
